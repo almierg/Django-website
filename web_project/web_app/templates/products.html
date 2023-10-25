@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Vanelli-Ürünler {% endblock title %}
+
+{% block content %}
+<br/><br/>
+
+<!-- PORTFOLIO
+        ===============================================================-->
+        <section id="portfolio-section" class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title">
+                            <h2>Ürünler</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <!-- PORTFOLIO INTRO TEXT -->
+                        <div class="kutu-container">
+                            <div class="card kutu" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Sülfirik asit</h5>
+                                </div>
+                            </div>
+                            <br/><br/>
+                            <div class="card kutu" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Akrilik Asit</h5>
+                                </div>
+                            </div>
+                            <br/><br/>
+                            <div class="card kutu" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Asetik Asit %80 - %100</h5>
+                                </div>
+                            </div>
+                            <br/><br/>
+                            <div class="card kutu" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">
+                                    Maleik Anhidrat</h5>
+                                </div>
+                            </div>
+                            <br/><br/>
+                            <div class="card kutu" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Hekzan</h5>
+                                </div>
+                            </div>
+                            <br/><br/>
+                            <div class="card kutu" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Ksilen</h5>
+                                </div>
+                            </div>
+                            <div class="card kutu" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Dietanolamin (DEA)</h5>
+                                </div>
+                            </div>
+                            <div class="card kutu" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Metanol</h5>
+                                </div>
+                            </div>
+                            <div class="card kutu" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">İzobutil Asetat</h5>
+                                </div>
+                            </div>
+                            <div class="card kutu" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Etil Asetat</h5>
+                                </div>
+                            </div>
+                            <div class="card kutu" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Amonyak</h5>
+                                </div>
+                            </div>
+                        </div>    
+                        
+                        
+                    </div>
+                    
+                </div><!-- /row -->
+            </div><!-- /container -->
+        </section><!-- /section Portfolio -->
+
+        <!-- Call to Action -->
+        <section class="bg-gray">
+            <div class="container text-center contact-por wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="50ms">
+                <h4 class="pb10">Güvenilir bir deneyim için &#xA0;&#xA0;</h4>
+                <a href="{% url 'contact' %}" class="btn btn-primary-corp-big btn-secondary"><i class="fa-regular fa-envelope le"></i> İLETİŞİME GEÇİN</a>
+            </div>
+        </section> 
+
+<br/><br/>
+
+
+{% endblock %}

@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} Vanelli Chemical Company {% endblock %}
+
+{% block content %}
+
+ <!-- BACKGROUND SLIDER
+        ===============================================================-->
+        <header>
+            <div class="bg-img-fixed-content">
+                <div class="bg-img-fixed"></div>
+                <!-- HOME PROMO -->
+                <section class="home-promo">
+                    <div class="text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <h2 class="titlepro">
+                            <span class="middle">Atomdan İnovasyona, <strong>Kİmyanın</strong> Gücü!</span>
+                        </h2>
+                    </div>
+                </section>
+            </div>
+        </header>
+
+        <!-- FLEXISLIDER -->
+        {% comment %} <header class="container-fluid intro-slider">
+            <div class="bg-slider-wrapper">
+                <div id="bg-slider" class="flexslider bg-slider">
+                    <ul class="slides">
+                        <li class="slide slide-1"></li>
+                       
+                    </ul>
+                </div>
+            </div>
+            <!-- HOME PROMO -->
+            <section class="home-promo">
+                <div class="text-center wow">
+                    <h2 class="titlepro">
+                        
+                        <span class="middle">Atomdan İnovasyona, <strong>Kimyanın</strong>Gücü!</span>
+                        
+                    </h2>
+                </div>
+            </section>
+        </header> {% endcomment %}
+
+
+        <section class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 text-center home-icons">
+                        <i class="fa-solid fa-line-chart wow fadeInUp" data-wow-delay="20ms"></i>
+                        <div>
+                            <h4>Hızlı Hİzmet</h4>
+                            <h5>Hızlı hizmet anlayışımız, müşteri performansını en üst düzeye çıkarmak için sürekli olarak etkili ve hızlı çözümler sunmayı hedefliyoruz.</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 text-center home-icons">
+                        <i class="fa-solid fa-tablet-screen-button wow fadeInUp" data-wow-delay="40ms"></i>
+                        <div>
+                            <h4>Müşterİ Odaklı</h4>
+                            <h5>Müşteri odaklı yaklaşımımız, müşterinin en üst kapsamını çıkarmak için ulaşılabilir ve onlara özel çözümler sunmak üzerine kurulmuştur.</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 text-center home-icons">
+                        <i class="fa-solid fa-code wow fadeInUp" data-wow-delay="60ms"></i>
+                        <div>
+                            <h4>Çevre Dostu</h4>
+                            <h5>Çevre dostu yaklaşımımız, sürdürülebilir üretim ve geri dönüşüme odaklanarak, büyüme etkilerini ve doğal kaynakları koruma amacını taşır.</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 text-center home-icons">
+                        <i class="fa-solid fa-suitcase wow fadeInUp" data-wow-delay="80ms"></i>
+                        <div>
+                            <h4>AR-GE Çalışmaları</h4>
+                            <h5>AR-GE ürünleri, sürekli olarak inovasyon ve teknolojik gelişmelere odaklanarak, sonuç odaklı çözümler üretmeyi amaçlar.</h5>
+                        </div>
+                    </div>
+                </div><!-- /row -->
+            </div><!-- /container -->
+        </section><!-- /section Principal Services -->
+
+        <section class="bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="title">
+                            <h2>Hakkımızda</h2>
+                        </div>
+                    </div>
+                    <!-- VIDEO -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe src="https://player.vimeo.com/video/183131568?title=0&byline=0&portrait=0&rel=0" allowfullscreen=""></iframe>
+                        </div>
+                        <div class="visible-xs-block visible-sm-block pt20"></div>
+                    </div>
+                    <!-- DESCRIPTION -->
+                    <div class="col-sm-12 col-md-6">
+                        <div class="blognews">
+                            <a href="about.html" class="mb20">
+                                <div class="item-img-wrap">
+                                    <div class="item-img-overlay">
+                                        <div class="about">
+                                            <span class="btn btn-transparent-sm"><i class="fa-solid fa-plus"></i> Read more</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {% for articles in writing1 %}
+                          <p> {{ articles.index_about|safe }} </p>
+                        {% endfor %}
+                    </div>
+                </div><!-- /row -->
+            </div><!-- /container -->
+        </section><!-- /section About Us -->
+
+
+
+        <section class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title-r">
+                            <h2>Son Haberler</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="slick-carousel" id="news">
+                            <!-- Post -->
+                            <div>
+                                <article class="blognews">
+                                    <div class="mt5 mb15">
+                                        <div class="item-img-wrap">
+                                            <img src="{% static 'admin/img/img/pic.jpg' %}" class="img-fluid" alt="template">
+                                            <div class="item-img-overlay">
+                                                {% comment %} <div class="news">
+                                                    <span class="btn btn-transparent-sm"><i class="fa-solid fa-plus"></i> Read
+                                                        more</span>
+                                                </div> {% endcomment %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4><p>Vanelli Chemical Otomasyon Alt Yapısını Güçlendiriyor</p></h4>
+                                    <p>2015 yılında yaptığı otomasyon yatırımı ile üretim değişimi dünya çapındaki 
+                                        değişimi sağlayan Vanelli Chemical, 2019 yılında yapılan mühendislik programları kapsamında otomasyonun altüst edilmesini
+                                        güçlendirerek üretim çalışmasını arttırdı.
+                                    </p>
+                                    <p class="author">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        MAR 21, 2023 <span>/</span>
+                                        BY <a href="#!"><strong>Almila</strong></a> <span>/</span>
+                                    </p>
+                                </article>
+                            </div><!-- /item - post -->
+                            <!-- Post -->
+                            <div>
+                                <article class="blognews">
+                                    <div class="mt5 mb15">
+                                        <div class="item-img-wrap">
+                                            <img src="{% static 'admin/img/img/pic2.jpg' %}" class="img-fluid" alt="template">
+                                            <div class="item-img-overlay">
+                                                {% comment %} <div class="news">
+                                                    <span class="btn btn-transparent-sm"><i class="fa-solid fa-plus"></i> Read
+                                                        more</span>
+                                                </div> {% endcomment %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4><p>Vanelli Chemical Halka Arz Oluyor</p></h4>
+                                    <p>Türkiye'nin ilk parafin bileşenlerinden Vanelli Chemical, Sermaye Piyasası Kurulu'nun kopyalarıyla halka arz süreci başladı.
+                                         20'den fazla sektörlü parafin, parafin emülsiyonları, hidrowax ve vazelin üreten Mercan Kimya'nın, 
+                                         20-21 Mayıs'ta 20 milyon TL nominal değerli ödemeleri için talep toplanaca
+                                    </p>
+                                    <p class="author">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        MAR 21, 2023 <span>/</span>
+                                        BY <a href="#!"><strong>Almila</strong></a> <span>/</span>
+                                    </p>
+                                </article>
+                            </div><!-- /item - post -->
+                            <!-- Post -->
+                            <div>
+                                <article class="blognews">
+                                    <div class="mt5 mb15">
+                                        <div class="item-img-wrap">
+                                            <img src="{% static 'admin/img/img/pic3.jpg' %}" class="img-fluid" alt="template">
+                                            <div class="item-img-overlay">
+                                                {% comment %} <div class="news">
+                                                    <span class="btn btn-transparent-sm"><i class="fa-solid fa-plus"></i> Read
+                                                        more</span>
+                                                </div> {% endcomment %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4><p>Vanelli Chemical AR-GE Merkezi Ödül Töreni</p></h4>
+                                    <p>Türkiye Cumhuriyeti Sanayi ve Teknoloji Bakanlığı tarafından bu sene 7'nci olarak düzenlenen 
+                                        “Teknoloji Geliştirme Bölgeleri ve AR-GE Merkezleri Ödül Töreni” kapsamında Vanelli Chemical AR-GE Merkezi belgesini almaya hak kazandı.
+                                    </p>
+                                    <p class="author">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        MAR 21, 2023 <span>/</span>
+                                        BY <a href="#!"><strong>Almila</strong></a> <span>/</span>
+                                    </p>
+                                </article>
+                            </div><!-- /item - post -->
+                            <!-- Post -->
+                            <div>
+                                <article class="blognews">
+                                    <a href="blogpost.html" class="mt5 mb15">
+                                        <div class="item-img-wrap">
+                                            <img src="{% static 'admin/img/img/pic.jpg' %}" class="img-fluid" alt="template">
+                                            <div class="item-img-overlay">
+                                                {% comment %} <div class="news">
+                                                    <span class="btn btn-transparent-sm"><i class="fa-solid fa-plus"></i> Read
+                                                        more</span>
+                                                </div> {% endcomment %}
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <h4><p>Vanelli Chemical Dezenfektan Tesisi Yatırımı</p></h4>
+                                    <p>2020 yılı başında patlak veren COVİD-19 virüsü nedeniyle bütün dünyanın olumsuz etkilenmesi ile Dezenfektan ürünlerine olan talep seçenekleri. 
+                                        Vanelli Chemical AR-GE merkezinin geliştirildiği üretim ile üretim kararı alan Vanelli Chemical, 
+                                        MERWAX CLEANEX markası ile yüzey dezenfektanı üretim halinde tesis yatırımı yapmıştır. 
+                                        Başlangıç ​​olarak Yüzey Dezenfektanı üretilecek olan sistem, Sağlık Bakanlığından onay alınarak başvuruda bulunulur.
+                                    </p>
+                                    <p class="author">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        MAR 21, 2023 <span>/</span>
+                                        BY <a href="#!"><strong>Almila</strong></a> <span>/</span>
+                                    </p>
+                                </article>
+                            </div><!-- /item - post -->
+                            <!-- Post -->
+                            <div>
+                                <article class="blognews">
+                                    <div class="mt5 mb15">
+                                        <div class="item-img-wrap">
+                                            <img src="{% static 'admin/img/img/pic2.jpg' %}" class="img-fluid" alt="template">
+                                            <div class="item-img-overlay">
+                                                {% comment %} <div class="news">
+                                                    <span class="btn btn-transparent-sm"><i class="fa-solid fa-plus"></i> Read
+                                                        more</span>
+                                                </div>
+                                            </div> {% endcomment %}
+                                        </div>
+                                    </div>
+                                    <h4><p>Vanelli Chemical, Anadolu'nun En Büyük 500 Şirketi Arasında</p></h4>
+                                    <p>45 yıldır güvenilir çözümler sunan Vanelli Chemical, Ekonomist Dergisi'nin gerçekleştirdiği Anadolu'nun En Büyük 500 Şirketi araştırmasında yerini aldı. 
+                                        Bu araştırmada yer alan 23 Denizli firmasından biri olarak şehrimize ve gelişmişe sunduğumuz katkılarla sektöre üyelerden gurur duyulur. 
+                                        Araştırmada yer alan tüm firmalarımızı tebrik ederiz.
+                                    </p>
+                                    <p class="author">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        MAR 21, 2023 <span>/</span>
+                                        BY <a href="#!"><strong>Almila</strong></a> <span>/</span>
+                                    </p>
+                                </article>
+                            </div><!-- /item - post -->
+                            <!-- Post -->
+                        </div><!-- /news carousel -->
+                    </div>
+                </div><!-- /row -->
+            </div><!-- /container -->
+        </section><!-- /section News -->
+        <!-- BUY NOW -->
+        <section class="bg-buy parallax">
+            <div class="container-fluid">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h1 class="intro-text mt30 wow fadeInUp">
+                            GÜVENLİ VE SÜRDÜREBİLİRLİK İÇİN
+                        </h1>
+                        {% comment %} <p class="lead mt30">Yazı bulup ekleyebilirsin
+                            augue.</p> {% endcomment %}
+                            
+                                <div class="container text-center contact-por wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="50ms">
+                                    {% comment %} <h4 class="pb10">Güvenilir bir deneyim için &#xA0;&#xA0;</h4> {% endcomment %}
+                                    <a href="{% url 'contact' %}" class="btn btn-primary-corp-big btn-secondary"><i class="fa-regular fa-envelope le"></i>GÜVENİLİR BİR DENEYİM İÇİN İLETİŞİME GEÇİN</a>
+                                </div>
+                             
+                    </div>
+                </div><!-- /row -->
+            </div><!-- /container-fluid -->
+        </section><!-- /section Buy Now with Parallax -->
+<br/><br/>
+
+
+{% endblock content %}        
+     

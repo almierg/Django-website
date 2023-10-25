@@ -1,0 +1,229 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <script src="https://kit.fontawesome.com/beea0b5015.js" crossorigin="anonymous"></script>  
+        <link rel="website icon" type="image/png" href="{% static 'admin/img/img/v-logo.png' %}">
+        {% comment %} <title>ASZM Chemical Companay</title> {% endcomment %}
+        <title> {% block title %} ASZM Chemical Companay {% endblock %}</title>
+
+        <!-- CSS
+        ===============================================================-->
+        
+        <link rel="stylesheet" href="{% static 'admin/css/box.css' %}">
+        <link rel="stylesheet" href="{% static 'admin/css/fonts.css' %}">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="{% static 'admin/css/bootstrap.min.css' %}">
+        <!-- Icons -->
+        <link rel="stylesheet" href="{% static 'admin/css/all.css' %}">
+        <!-- Lightbox -->
+        <link rel="stylesheet" href="{% static 'admin/css/glightbox.css' %}">
+        <!-- Flex Slider -->
+        <link rel="stylesheet" href="{% static 'admin/css/flexslider.css' %}">
+        <!-- Animation -->
+        <link rel="stylesheet" href="{% static 'admin/css/animate.min.css' %}">
+        <!-- Slick Carousel -->
+        <link rel="stylesheet" href="{% static 'admin/css/slick.css' %}">
+        <!-- Select Style -->
+        <link rel="stylesheet" href="{% static 'admin/css/bootstrap-select.min.css' %}">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="{% static 'admin/css/main.css' %}" id="theme">
+        <!-- Change Color Theme CSS --> 
+        <link rel="stylesheet" href="{% static 'admin/css/style-switcher.css' %}"> 
+        <!--Slider-->
+
+
+    </head>
+     <!-- NAVBAR
+        ===============================================================-->
+        <nav class="navbar navbar-expand-lg position-fixed navbar-fixed-top navbar-default w-100">
+            <div class="container">
+                <!-- Change your logo here -->
+                <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'admin/img/img/vanelli.png' %}" 
+                    width="160" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav navbar-nav navbar-right ml-auto">
+                        <li class=""><a href="{% url 'index' %}">Anasayfa</a></li>
+                        <li class="dropdown">
+                            <a href="{% url 'about' %}" class="dropdown-toggle" role="button" aria-expanded="false">Hakkımızda</a>
+                           
+                        </li>
+                        {% comment %} <li><a href="{% url 'products' %}">Ürünler</a></li> {% endcomment %}
+                        <li class="dropdown">
+                            <a href="{% url 'products' %}" class="dropdown-toggle" role="button"  aria-expanded="false">Ürünler </a>
+                        </li>
+                      
+                        {% comment %} <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">Elements <i class="fa-solid fa-angle-down small"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item"><a href="elements.html">Content</a></li>
+                                <li class="dropdown-item"><a href="error404.html">404 Error</a></li>
+                                <li class="dropdown-item"><a href="login.html">Login</a></li>
+                                <li class="dropdown-item"><a href="forms.html">Forms</a></li>
+                                <li class="dropdown-item"><a href="maps-js.html">JS Google Maps</a></li>
+                            </ul>
+                        </li> {% endcomment %}
+                        <li class="dropdown">
+                            <a href="{% url 'contact' %}" class="dropdown-toggle" role="button" aria-expanded="false">İletİşİm</a>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        {% block content %}
+
+
+        {% endblock %}
+
+
+     <!-- FOOTER
+        ===============================================================-->
+        <footer>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-widget col-sm-12 col-md-12 col-lg-4 first">
+                            <h3>Hakkımızda</h3>
+                            <p><a href="{% url 'about' %}">Vanelli Chemical</a>, inovasyon, kalite ve sürdürülebilirlik ilkeleriyle hareket eden bir kimya şirketidir.
+                                Aynı zamanda araştırma ve geliştirme faaliyetleriyle sektöre yenilik ve ilerlemeye devam ediyor.
+                            </p>
+                            
+                            <div class="visible-xs-block visible-sm-block pt20"></div>
+                        </div>
+                        <div class="footer-widget col-sm-6 col-md-6 col-lg-4">
+                            <h3>Photo Gallery</h3>
+                            <a href="{% static 'admin/img/img/gall1.webp' %}" class="gallery glightbox" data-type="image" data-draggable="true" title="Photo Gallery 1">
+                                <img src="{% static 'admin/img/img/gall1.webp' %}" alt="Gallery thumbnail">
+                            </a>
+                            <a href="{% static 'admin/img/img/gall2.webp' %}" class="gallery glightbox" data-type="image" data-draggable="true" title="Photo Gallery 2">
+                                <img src="{% static 'admin/img/img/gall2.webp' %}" alt="Gallery thumbnail">
+                            </a>
+                            <a href="{% static 'admin/img/img/gall3.webp' %}" class="gallery glightbox" data-type="image" data-draggable="true" title="Photo Gallery 3">
+                                <img src="{% static 'admin/img/img/gall3.webp' %}" alt="Gallery thumbnail">
+                            </a>
+                            <a href="{% static 'admin/img/img/gall4.webp' %}" class="gallery glightbox" data-type="image" data-draggable="true" title="Photo Gallery 4">
+                                <img src="{% static 'admin/img/img/gall4.webp' %}" alt="Gallery thumbnail">
+                            </a>
+                            <a href="{% static 'admin/img/img/gall5.webp' %}" class="gallery glightbox" data-type="image" data-draggable="true" title="Photo Gallery 5">
+                                <img src="{% static 'admin/img/img/gall5.webp' %}" alt="Gallery thumbnail">
+                            </a>
+                            {% comment %} <a href="assets/img/gall6.webp" class="gallery glightbox" data-type="image" data-draggable="true" title="Photo Gallery 6">
+                                <img src="assets/img/gall6.webp" alt="Gallery thumbnail">
+                            </a>
+                            <a href="assets/img/gall7.webp" class="gallery glightbox" data-type="image" data-draggable="true" title="Photo Gallery 7">
+                                <img src="assets/img/gall7.webp" alt="Gallery thumbnail">
+                            </a>
+                            <a href="assets/img/gall8.webp" class="gallery glightbox" data-type="image" data-draggable="true" title="Photo Gallery 8">
+                                <img src="assets/img/gall8.webp" alt="Gallery thumbnail">
+                            </a>
+                            <a href="assets/img/gall9.webp" class="gallery glightbox" data-type="image" data-draggable="true" title="Photo Gallery 9">
+                                <img src="assets/img/gall9.webp" alt="Gallery thumbnail">
+                            </a>
+                            <a href="assets/img/gall10.webp" class="gallery glightbox" data-type="image" data-draggable="true" title="Photo Gallery 10">
+                                <img src="assets/img/gall10.webp" alt="Gallery thumbnail">
+                            </a>
+                            <a href="assets/img/gall1.webp" class="gallery glightbox" data-type="image" data-draggable="true" title="Photo Gallery 11">
+                                <img src="assets/img/gall1.webp" alt="Gallery thumbnail">
+                            </a>
+                            <a href="assets/img/gall2.webp" class="gallery glightbox" data-type="image" data-draggable="true" title="Photo Gallery 12">
+                                <img src="assets/img/gall2.webp" alt="Gallery thumbnail">
+                            </a>
+                            <div class="visible-xs-block visible-sm-block pt20"></div> {% endcomment %}
+                        </div>
+                        <div class="footer-widget col-sm-6 col-md-6 col-lg-4">
+                            <h3>İLETİŞİM</h3>
+                            <ul class="list-unstyled">
+                                <li><i class="fa-solid fa-map-marker"></i> Kazımiye mah. Salih omurtak cad. - Çorlu, Tekirdağ</li>
+                                <li class="number"><i class="fa-solid fa-phone"></i><a href="tel:05055555555">0212 345 5353</a></li>
+                                <li><i class="fa-solid fa-envelope"></i> <a href="mailto:vanelli@gmail.com">vanelli@gmail.com</a></li>
+                            </ul>
+                            <div class="visible-xs-block visible-sm-block pt20"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="list-inline social">
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoidHIifQ%3D%3D%22%7D">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.linkedin.com/">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.youtube.com/">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.instagram.com/">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        {% comment %} <div class="col-sm-6 credits">
+                            <p>&#xA9; CORPBOOT 2023. All Rights Reserved.</p>
+                            <p class="small">
+                                <i class="fa-solid fa-angle-right"></i>
+                                Developed by: <a href="#">Almila</a>
+                            </p>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+            <!--WhatsApp Button-->
+            <a href="https://api.whatsapp.com/send?phone=[your-whatsapp-number]&text=hello" class="whatsappButton" id="whatsappButton"><i class="fa-brands fa-whatsapp"></i></a>
+            <!--back to top-->
+            <a href="#" class="scrollToTop" id="scrollToTop"><i class="fa-solid fa-angle-up"></i></a>
+        </footer>
+
+        <!-- JAVASCRIPT
+        ===============================================================-->
+        <!-- JQuery -->
+        <script src="{% static 'admin/js/jquery-3.7.1.min.js' %}"></script>
+        <script src="{% static 'admin/js/jquery-migrate-3.4.1.min.js' %}"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="{% static 'admin/js/popper.min.js' %}"></script>
+        <script src="{% static 'admin/js/bootstrap.min.js' %}"></script>
+        <!-- Glightbox -->
+        <script src="{% static 'admin/js/glightbox.min.js' %}"></script>
+        <!-- Slick Carousel -->
+        <script src="{% static 'admin/js/slick.min.js' %}"></script>
+        <!-- Select Style -->
+        <script src="{% static 'admin/js/bootstrap-select.min.js' %}"></script>
+        <!-- Flexslider -->
+        <script src="{% static 'admin/js/jquery.flexslider-min.js' %}"></script>
+        <!-- Placeholder for IE9 -->
+        <script src="{% static 'admin/js/jquery.placeholder.min.js' %}"></script>
+        <!-- Animation -->
+        <script src="{% static 'admin/js/wow.min.js' %}"></script>
+        <!-- Main -->
+        <script src="{% static 'admin/js/main.js' %}"></script>
+        <!-- Change Theme Color JS -->
+        <script src="{% static 'admin/js/js/style-switcher.js' %}"></script>
+    </body>
+</html>

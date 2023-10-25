@@ -1,0 +1,343 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} Vanelli-Hakkımızda {% endblock title %}
+{% block content %}
+
+
+
+<br/><br/>
+
+ <!-- ABOUT US
+        ===============================================================-->
+        <!-- INTRODUCTION -->
+        <section class="bg-white" data-wow-duration="1200ms" data-wow-delay="100ms">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title">
+                            <h2>Hakkımızda</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p><img src="{% static 'admin/img/img/150.jpg' %}" alt="Photo" class="mr20 mt5 mb20 float-left">
+                           {% for articles in writing1 %}
+                              <p> {{ articles.about|safe }} </p>
+                           {% endfor %}
+                    </div>
+                    <!-- FAQ -->
+                    <div class="col-md-6">
+                        <h4 class="color5">Sıkça Sorulan Sorular</h4>
+                        <!-- Accordion -->
+                        <div class="accordion mb-5" id="accordionExample">
+                            <!-- Card -->
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            1. Ürünlerinizi nasıl temin edebilirim?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Ürünlerimize ulaşmak için, web sitemizdeki iletişim bilgilerinden bize ulaşabilir veya en yakın distribütörümüzle iletişime geçebilirsiniz.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card -->
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            2. Sürdürülebilirlik politikanız nedir?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Sürdürülebilirlik, iş yapma şeklimizin temel bir parçasıdır. Üretim süreçlerimizi çevresel etkileri en aza indirecek şekilde tasarlamaya özen gösteririz.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card -->
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            3. Hangi tür kimyasal ürünleri üretiyor?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Endüstriyel kimyasallardan özel kimyasal çözümlere kadar geniş bir yelpazede ürün üretmektedir. Ürün portföyümüz, müşteri ihtiyaçlarına uygun olarak sürekli genişlemektedir.
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /accordion -->
+                    </div><!-- /faq -->
+                </div><!-- /row -->
+            </div><!-- /container -->
+        </section><!-- /section Introduction -->
+
+
+
+<br/><br/>
+
+ <!-- MISION, VISION AND VALUES -->
+ <section class="bg-gray">
+    <div class="container">
+        <div class="row">
+            <!-- Mision -->
+            <div class="col-md-4">
+                <p><br><img src="{% static 'admin/img/img/misyon.jpg' %}" alt="Mission" class="mb15 img-fluid"></p>
+                <h3 class="color5 wow fadeInUp">Misyon</h3>
+                 {% for articles in writing1 %}
+                  {{ articles.mission|safe }}
+                 {% endfor %} 
+            </div>
+            <!-- Vision -->
+            <div class="col-md-4">
+                <p><br><img src="{% static 'admin/img/img/vizyon.webp' %}" alt="Vision" class="mb15 img-fluid"></p>
+                <h3 class="color5 wow fadeInUp">Vizyon</h3>
+                {% for articles in writing1 %}
+                   {{ articles.vision|safe }}
+                {% endfor %}
+            </div>
+            <!-- Values -->
+            <div class="col-md-4">
+                <p><br><img src="{% static 'admin/img/img/değer.webp' %}" alt="Values" class="mb15 img-fluid"></p>
+                <h3 class="color5 wow fadeInUp">Değerler</h3>
+                {% for articles in writing1 %}
+                  {{ articles.values|safe }}
+                {% endfor %}  
+            </div>
+        </div><!-- /row -->
+    </div><!-- /container -->
+</section><!-- /section Mision, Vision and Values -->
+
+
+
+<br/><br/>
+ <!-- SKILLS -->
+ <section class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2>Becerilerimiz</h2>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'admin/img/img/beceri.webp' %}" alt="Skills" class="img-fluid">
+            <br/><br/>
+                {% for articles in writing1 %}
+                  {{ articles.our_skills|safe }}
+                {% endfor %}  
+            </div>
+            <div class="visible-xs-block pt20"></div>
+            <div class="col-md-6 skills">
+                <!-- Skill -->
+                <h5 class="pt0">Kimyasal Analiz ve Test</h5>
+                <div class="progress wow fadeInUp">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" data-value="90" style="width: 90%;">90%<span></span></div>
+                </div>
+                <!-- Skill -->
+                <h5>Sürdürülebilir Üretim</h5>
+                <div class="progress wow fadeInUp">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" data-value="80" style="width: 80%;">80%</div>
+                </div>
+                <!-- Skill -->
+                <h5>E-ticaret</h5>
+                <div class="progress wow fadeInUp">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" data-value="95" style="width: 85%;">85%</div>
+                </div>
+                <!-- Skill -->
+                <h5>Marketing</h5>
+                <div class="progress wow fadeInUp">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" data-value="70" style="width: 70%;">70%</div>
+                </div>
+            </div>
+        </div><!-- /row -->
+    </div><!-- /container -->
+</section><!-- /section Skills -->
+
+<br/><br/>
+<!-- TEAM -->
+<section class="bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-r">
+                    <h2>YÖNETİM EKİBİMİZ</h2>
+                </div>
+            </div>
+            <!-- Member -->
+            <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <figure class="item-img-wrap">
+                    <img src="{% static 'admin/img/img/staff1.jpg' %}" class="img-fluid" alt="team">
+                    <div class="item-img-overlay">
+                        <div class="team-social">
+                            <p>
+                                
+                                "Başarı, adım adım ilerlemenin sonuçları."
+                            </p>
+                        </div>
+                    </div>
+                </figure>
+                <div class="team-name">
+                    <h4 class="h-underline2">Şenol ERGİN</h4>
+                    <h5>KİMYA MÜHENDİSİ</h5>
+                    <ul class="list-inline socialstaff w-100 text-center p-0">
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Facebook" class="corp-tooltip">
+                                <i class="fa-brands fa-facebook-square fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Twitter" class="corp-tooltip">
+                                <i class="fa-brands fa-twitter-square fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Linkedin" class="corp-tooltip">
+                                <i class="fa-brands fa-linkedin fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Email" class="corp-tooltip">
+                                <i class="fa-solid fa-envelope-square fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="visible-xs-block visible-sm-block pt20"></div>
+            </div>
+            <!-- Member -->
+            <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="200ms">
+                <figure class="item-img-wrap">
+                    <img src="{% static 'admin/img/img/staff2.jpg' %}" class="img-fluid" alt="team">
+                    <div class="item-img-overlay">
+                        <div class="team-social">
+                            <p>
+                                
+                                "Zorluklar, gerçek gücü keşfetmenin fırsatlarıdır."                            
+                            </p>
+                        </div>
+                    </div>
+                </figure>
+                <div class="team-name">
+                    <h4>Mustafa YILMAZ</h4>
+                    <h5>Pazarlamacı</h5>
+                    <ul class="list-inline socialstaff w-100 text-center p-0">
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Facebook" class="corp-tooltip">
+                                <i class="fa-brands fa-facebook-square fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Twitter" class="corp-tooltip">
+                                <i class="fa-brands fa-twitter-square fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Linkedin" class="corp-tooltip">
+                                <i class="fa-brands fa-linkedin fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Email" class="corp-tooltip">
+                                <i class="fa-solid fa-envelope-square fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="visible-xs-block visible-sm-block pt20"></div>
+            </div>
+            <!-- Member -->
+            <div class="col-sm-6 col-md-3 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="200ms">
+                <figure class="item-img-wrap">
+                    <img src="{% static 'admin/img/img/staff3.jpg' %}" class="img-fluid" alt="team">
+                    <div class="item-img-overlay">
+                        <div class="team-social">
+                            <p>
+                                "Hayallerini kovalamaktan vazgeçmek, çünkü onların senin gerçek potansiyelini yansıtıyor."                            </p>
+                        </div>
+                    </div>
+                </figure>
+                <div class="team-name">
+                    <h4>Melek ERGİN</h4>
+                    <h5>Muhasebe</h5>
+                    <ul class="list-inline socialstaff w-100 text-center p-0">
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Facebook" class="corp-tooltip">
+                                <i class="fa-brands fa-facebook-square fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Twitter" class="corp-tooltip">
+                                <i class="fa-brands fa-twitter-square fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Linkedin" class="corp-tooltip">
+                                <i class="fa-brands fa-linkedin fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Email" class="corp-tooltip">
+                                <i class="fa-solid fa-envelope-square fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="visible-xs-block visible-sm-block pt20"></div>
+            </div>
+            <!-- Member -->
+            <div class="col-sm-6 col-md-3 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <figure class="item-img-wrap">
+                    <img src="{% static 'admin/img/img/staff4.jpg' %}" class="img-fluid" alt="team">
+                    <div class="item-img-overlay">
+                        <div class="team-social">
+                            <p>
+                                "Başarının tadını çıkarmak için bugün küçük bir adım at."                            </p>
+                        </div>
+                    </div>
+                </figure>
+                <div class="team-name">
+                    <h4>Hasan SERGEN</h4>
+                    <h5>Genel Müdür</h5>
+                    <ul class="list-inline socialstaff w-100 text-center p-0">
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Facebook" class="corp-tooltip">
+                                <i class="fa-brands fa-facebook-square fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Twitter" class="corp-tooltip">
+                                <i class="fa-brands fa-twitter-square fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Linkedin" class="corp-tooltip">
+                                <i class="fa-brands fa-linkedin fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!" data-toggle="tooltip" data-placement="bottom" data-original-title="Email" class="corp-tooltip">
+                                <i class="fa-solid fa-envelope-square fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- /row -->
+    </div><!-- /container -->
+</section><!-- /section Team -->   
+
+
+
+
+{% endblock %}
